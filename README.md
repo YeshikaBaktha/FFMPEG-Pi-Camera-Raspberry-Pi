@@ -18,7 +18,7 @@ make
 sudo make install
  
 B. library aac plus
-cd /usr/src 
+ cd /usr/src 
 wget http://tipok.org.ua/downloads/media/aacplus/libaacplus/libaacplus-2.0.2.tar.gz
 tar -xzf libaacplus-2.0.2.tar.gz
 cd libaacplus-2.0.2
