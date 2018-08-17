@@ -1,9 +1,7 @@
 # FFMPEG-Pi-Camera-Raspberry-Pi
-
 1. Install libraries 
 A.
 X264 library [necessary] :
-
 cd /usr/src
 git clone git://git.videolan.org/x264
 cd x264
@@ -20,7 +18,6 @@ cd libaacplus-2.0.2
 make
 sudo make install
 
-
 C. fdk aac
 cd usr/src
 wget -O fdk-aac.tar.gz https://github.com/mstorsjo/fdk-aac/tarball/master
@@ -31,7 +28,6 @@ autoreconf -fiv
 make -j2
 sudo make install
 
-
 2. Install ffmpeg
 cd /usr/src
 git clone git://source.ffmpeg.org/ffmpeg.git
@@ -41,13 +37,10 @@ make
 make install
 
 LIVE STREAM FROM COMMAND LINE:
-
 raspivid -o - -t 0 -vf -hf -w 960 -h 540 -fps 10 -b 500000 | ffmpeg -re -ar 44100 -ac 2 -acodec pcm_s16le -f s16le -ac 2 -i /dev/zero -f h264 -i - -vcodec copy -acodec aac -ab 128k -g 50 -strict experimental -f flv rtmp://ip.address.of.videoserver/live1/stream
 
 Or
 raspivid -o - -t 0 -vf -hf -n -w 1280 -h 720 -fps 25 -b 500000 | ffmpeg -i - -vcodec copy -f flv rtmp://ip.address.of.videoderver/live1/stream
-
-
 
 TO PULL OUT STREAM :
 ffplay "rtmp://ip.address.of.videoserver/live1/stream?user=user&pass=password"
