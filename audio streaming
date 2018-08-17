@@ -1,0 +1,11 @@
+RASPBERRY PI AUDIO RECORD:
+
+1. Connect usb mic to raspberry pi.
+
+2. arecord --device=hw:1,0 --format S16_LE --rate 44100 -c1 test.wav (test if mic is able to record)
+
+3. sudo aplay test.wav
+
+STREAM AUDIO TO SERVER USING FFMPEG :
+
+arecord -f cd -D plughw:1,0 | ffmpeg -re -i - -acodec mp2 -ab 32k -ac 1 -f mp2 rtmp://your.video.server.ip/live1/stream
