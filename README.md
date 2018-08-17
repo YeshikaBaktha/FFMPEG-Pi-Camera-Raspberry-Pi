@@ -1,12 +1,20 @@
 # FFMPEG-Pi-Camera-Raspberry-Pi
 1. Install libraries 
+
 A.
+
 X264 library [necessary] :
+
 cd /usr/src
+
 git clone git://git.videolan.org/x264
+
 cd x264
+
 ./configure --host=arm-unknown-linux-gnueabi --enable-static --disable-opencl
+
 make
+
 sudo make install
  
 B. library aac plus
