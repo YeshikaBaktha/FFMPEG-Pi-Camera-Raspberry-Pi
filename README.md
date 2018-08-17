@@ -8,7 +8,7 @@ cd x264
 ./configure --host=arm-unknown-linux-gnueabi --enable-static --disable-opencl
 make
 sudo make install
-
+ 
 B. library aac plus
 cd /usr/src 
 wget http://tipok.org.ua/downloads/media/aacplus/libaacplus/libaacplus-2.0.2.tar.gz
