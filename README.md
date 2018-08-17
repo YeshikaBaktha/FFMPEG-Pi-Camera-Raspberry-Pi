@@ -2,9 +2,7 @@
 1. Install libraries 
 
 A.
-
 X264 library [necessary] :
-
 cd /usr/src
 
 git clone git://git.videolan.org/x264
